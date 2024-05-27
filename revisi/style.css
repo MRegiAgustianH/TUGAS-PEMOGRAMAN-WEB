@@ -1,0 +1,369 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#register{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.box-register{
+    width: 300px;
+    min-height: 200px;
+    border: 1px solid rgb(206, 203, 203);
+    background-color: #AD88C6;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+.box-register h2{
+    text-align: center;
+    margin-bottom: 15px;
+
+}
+
+.footer-register{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items:last baseline;
+}
+.footer-register a{
+    padding: 0 5px;
+    color:red;
+}
+
+#login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.box-login{
+    width: 300px;
+    min-height: 200px;
+    border: 1px solid rgb(206, 203, 203);
+    background-color: #7469B6;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.box-login h2{
+    text-align: center;
+    margin-bottom: 15px;
+    
+}
+.footer-login{
+    width: 100%;
+    height: 20px;
+    text-align: end;
+}
+.footer-login a{
+    color: white;
+}
+
+#profile{
+    display: flex;
+    flex-wrap: wrap;
+    height: 150vh;
+    justify-content: center;
+    align-items: center;
+}
+.box-profile{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.box-profile h3{
+    text-align:center;
+    width: 100%;
+}
+.box-password{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.box-password h3{
+    text-align: center;
+    width: 100%;
+}
+.box-data{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+}
+.btn{
+    width: 30%;
+    padding: 8px 15px;
+    background-color: crimson;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.main-diamond{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 500px;
+    gap: 5px;
+    justify-content: center;
+}
+.box-diamond{
+    width: 150px;
+    height: 150px;
+    padding: 0 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.box-diamond img{
+    width: 50%;
+    height: 50%;
+}
+
+#main-produk{
+    width: 100%;
+    height: 500px;
+}
+#main-produk table{
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 127px;
+}
+
+td,th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+
+}
+#main-produk .btn{
+    width: 100px;
+    margin-bottom: 20px;
+    margin-left: 125px;
+}
+
+#main-produk .btn a{
+    color: white;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 68px;
+    background-color: #7469B6;
+}
+
+a:link{
+    text-decoration: none !important;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper h2{
+    color: white;
+    text-decoration:none ;
+}
+.navigation{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation > li{
+    display: flex;
+    list-style-type: none;
+    padding: 0 10px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation > li > a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.navigation img{
+    width: 20px;
+    height: 20px;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+}
+
+section{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    background-color: whitesmoke;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.mainIklan{
+    display: flex;
+    width: 1000px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.iklan1{
+    width: 70%;
+    height: 100%;
+    border-radius: 5px;
+    
+}
+
+.iklan1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.iklan2{
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.iklan21{
+    width: 100%;
+    height: 50%;
+    margin-left: 2px;
+    border-radius: 5px;
+    
+}
+
+.iklan21 img{
+    width: 100%;
+    height: 100%; 
+    border-radius: 5px;
+    
+}
+
+.iklan22{
+    width: 100%;
+    height: 98px;
+    margin-top: 2px;
+    margin-left: 2px;
+    border-radius: 5px;
+}
+
+.iklan22 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 350px;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 100px;
+}
+.produk{
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.produk img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.produk:hover{
+    transform: scale(1.05); 
+}
+
+
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    color: white;
+    background-color: #AD88C6;
+    justify-content:center;
+    align-items: center;
+}
+#wallpaper{
+    width: 100%;
+    height: 80vh;
+}
+
+#wallpaper p{
+    background-image: url("asset/wallpaper2.png");
+    background-repeat: repeat;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    font-size: 120px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Steelfish Rg', 'helvetica neue', 
+                            helvetica, arial, sans-serif;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wallpaper-animation 10s infinite;
+}
+@keyframes wallpaper-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
