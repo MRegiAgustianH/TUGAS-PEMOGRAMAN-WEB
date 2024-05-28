@@ -1,3 +1,13 @@
+<?php
+session_start();
+// Cek apakah session status sudah true
+if ($_SESSION['status'] != true) {
+    // Jika false, alihkan ke halaman login.php
+    header('Location: login.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +22,8 @@
         <nav class="wrapper">
             <a href="Dashboard.php"><h2>LING STORE</h2></a>
             <ul class="navigation">
+                <img src="asset/histori.svg" alt="">
+                <li><a href="histori.php">Histori</a></li>
                 <img src="asset/dataproduk.svg" alt="">
                 <li><a href="produk.php">Data Produk</a></li>
                 <img src="asset/profile.svg" alt="">

@@ -36,16 +36,14 @@
     <div class="main-diamond">
             <?php
                 include 'Database.php';
-                $sql = "SELECT * FROM data_ml";
+                $sql = "SELECT * FROM data_genshin";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
-                    echo "<a href='transaksi-ml.php?id={$row['id']}&jumlah_dm={$row['jumlah_dm']}&harga={$row['harga']}'>";
                     echo "<div class='box-diamond'>";
-                    echo "<figcaption>". $row['jumlah_dm']. " Diamond</figcaption>";
-                    echo "<img src='asset/MLBB_Diamonds.png' alt=''>";
+                    echo "<figcaption>". $row['jumlah_primo']. " Primogems</figcaption>";
+                    echo "<img src='asset/primo.png' alt=''>";
                     echo "<figcaption style='color:red'>Rp. ". $row['harga']. "</figcaption>";
                     echo "</div>";
-                    echo "</a>";
                 }
             ?>
     </div>

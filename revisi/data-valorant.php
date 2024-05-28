@@ -7,6 +7,13 @@ if ($_SESSION['status'] != true) {
 }
 ?>
 
+<?php
+include 'Database.php';
+
+$sql = "SELECT * FROM data_valorant";
+$result = $conn->query($sql);
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,12 +31,13 @@ if ($_SESSION['status'] != true) {
             <ul class="navigation">
                 <img src="asset/histori.svg" alt="">
                 <li><a href="histori.php">Histori</a></li>
-                <img src="asset/dataproduk.svg" alt="">
+                <img src="asset/dataproduk.svg" alt=""> 
                 <li><a href="produk.php">Data Produk</a></li>
                 <img src="asset/profile.svg" alt="">
                 <li><a href="profile.php" >Profile</a></li>
                 <img src="asset/logout.svg" alt="">
-                <li><a href="keluar.php">Keluar</a></li>   
+                <li><a href="keluar.php">Keluar</a></li>
+                
             </ul>     
         </nav>
         </header>
@@ -44,11 +52,39 @@ if ($_SESSION['status'] != true) {
         </div>
         
     </section>
+    
+    
 
-    <div id="wallpaper">
-        <p>LING STORE</p>
+    <div id="main-produk">
+        <button type="submit" class="btn"><a href="tambah-valorant.php">Tambah</a></button>
+        <table>
+            <tr>
+                <th >No</th>
+                <th>Jumlah Valoran Point</th>
+                <th>Harga</th>
+                <th style="width:200px">Aksi</th>
+            </tr>
+            <?php
+            if($result && $result->num_rows > 0)
+            {
+                while($row = $result->fetch_assoc()){
+                    echo "<tr> 
+                    <td>". $row["id"] ."</td>
+                    <td>". $row["jumlah_vp"] . "</td>
+                    <td>Rp. ". $row["harga"] . "</td>
+                    <td><a href='edit-valorant.php?id=" .$row['id']."' >Edit</a> || <a href='delete-valorant.php?id=" .$row['id']."' >Delete</a>
+                    </tr>";
+                }
+            }else{
+                echo "<tr><td colspan='4'>Tidak Ada Data</td></tr>";
+            }
+            ?>
+
+
+        </table>
+        
+
     </div>
-
 
     <footer>
         &copy; Copyright 2024 ALING
@@ -58,5 +94,5 @@ if ($_SESSION['status'] != true) {
 
     
 </body>
-</html> 
+</html>
 

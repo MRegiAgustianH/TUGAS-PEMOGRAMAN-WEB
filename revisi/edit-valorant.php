@@ -14,22 +14,22 @@ include 'Database.php';
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
-    $sql = "SELECT * FROM data_pubg WHERE id=$id";
+    $sql = "SELECT * FROM data_valorant WHERE id=$id";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
 }
 
 if(isset($_POST['submit'])){
     $id = $_POST['id'];
-    $jumlah_uc = $_POST['jumlah_uc'];
+    $jumlah_vp = $_POST['jumlah_vp'];
     $harga = $_POST['harga'];
 
-    $sql = "UPDATE data_pubg SET jumlah_uc='$jumlah_uc', harga='$harga' WHERE id=$id";
+    $sql = "UPDATE data_valorant SET jumlah_vp='$jumlah_vp', harga='$harga' WHERE id=$id";
     $result = $conn->query($sql);
 
     if($result){
         echo "<script>alert('Data Berhasil di ubah')</script>";
-        echo "<script>window.location='data-pubg.php'</script>";
+        echo "<script>window.location='data-valorant.php'</script>";
     }else{
         echo "ERROR: ". $conn->error;
     }
@@ -99,9 +99,9 @@ if(isset($_POST['submit'])){
     </section>
 
     <div id='box-edit'>
-        <form action="edit-pubg.php?id=<?php echo $id;?>" method="post">
-            <label for="jumlah_uc">Jumlah UC:</label>
-            <input class="input-edit" type="number" id="jumlah_uc" name="jumlah_uc" value="<?php echo $row['jumlah_uc'];?>">
+        <form action="edit-valorant.php?id=<?php echo $id;?>" method="post">
+            <label for="jumlah_vp">Jumlah VP:</label>
+            <input class="input-edit" type="number" id="jumlah_vp" name="jumlah_vp" value="<?php echo $row['jumlah_vp'];?>">
             <br>
             <label for="harga">Harga:</label>
             <input class="input-edit" type="number" id="harga" name="harga" value="<?php echo $row['harga'];?>">

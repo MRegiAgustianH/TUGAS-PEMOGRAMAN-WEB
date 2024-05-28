@@ -7,7 +7,6 @@ if ($_SESSION['status'] != true) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +16,18 @@ if ($_SESSION['status'] != true) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <style>
+        .box-data{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: whitesmoke;
+            border-radius: 5px;
+        }
+    </style>
 
     <header>
         <nav class="wrapper">
@@ -29,7 +40,8 @@ if ($_SESSION['status'] != true) {
                 <img src="asset/profile.svg" alt="">
                 <li><a href="profile.php" >Profile</a></li>
                 <img src="asset/logout.svg" alt="">
-                <li><a href="keluar.php">Keluar</a></li>   
+                <li><a href="keluar.php">Keluar</a></li>
+                
             </ul>     
         </nav>
         </header>
@@ -44,11 +56,15 @@ if ($_SESSION['status'] != true) {
         </div>
         
     </section>
-
-    <div id="wallpaper">
-        <p>LING STORE</p>
+    <div class="box-data">
+        <form action="" method="POST">
+                <input type="text" name="jumlah_primo" placeholder="Jumlah Primogems" class="input" required>
+                <input type="text" name="harga" placeholder="Harga" class="input"  required>
+                <input type="submit" name="tambah" value="Tambah Produk" class="btn">
+        </form>
     </div>
-
+    
+ 
 
     <footer>
         &copy; Copyright 2024 ALING
@@ -58,5 +74,21 @@ if ($_SESSION['status'] != true) {
 
     
 </body>
-</html> 
+</html>
 
+<?php
+include 'Database.php';
+if(isset($_POST['tambah'])){
+    $jumlah_primo = $_POST['jumlah_primo'];
+    $harga = $_POST['harga'];
+    $query = "INSERT INTO data_genshin (jumlah_primo, harga) VALUES ('$jumlah_primo', '$harga')";
+    $result = mysqli_query($conn, $query);
+    if($result){
+        echo "<script>alert('Berhasil Tambah Produk')</script>";
+        echo "<script>window.location='data-genshin.php'</script>";
+    }else{
+        echo "<script>alert('Tambah GAGAL')</script>";
+    }
+}
+
+?>

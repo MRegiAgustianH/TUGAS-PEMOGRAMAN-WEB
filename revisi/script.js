@@ -51,8 +51,8 @@ if (currentIklan_2 === 1) {
 }
 
 // Call the toggleIklan function every second
-setInterval(toggleIklan, 3000);
-setInterval(toggleIklan2, 3000);
+setInterval(toggleIklan, 1000);
+setInterval(toggleIklan2, 1000);
 
 
 

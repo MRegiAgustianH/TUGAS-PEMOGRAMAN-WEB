@@ -12,6 +12,10 @@
         <nav class="wrapper">
             <a href="index.php"><h2>LING STORE</h2></a>
             <ul class="navigation">
+                <img src="asset/home.svg" alt="">
+                <li><a href="index.php">Beranda</a></li>
+                <img src="asset/about.svg" alt="">
+                <li><a href="tentang.php">Tentang</a></li>
                 <img src="asset/chat.svg" alt="">
                 <li><a href="https://wa.me/6282117697602">Chat Admin</a></li>
             </ul>     
@@ -41,12 +45,12 @@
                 <figcaption>Rp 3.500 - 1.499.000</figcaption>
             </div>
             <div class="produk">
-                <a href=""><img src="asset/valorant.jpg" alt=""></a>
+                <a href="data-produk-valorant.php"><img src="asset/valorant.jpg" alt=""></a>
                 <figcaption>Valorant</figcaption>
                 <figcaption>Rp 13.500 - 1.499.000</figcaption>
             </div>
             <div class="produk">
-                <a href=""><img src="asset/genshin.jpg" alt=""></a>
+                <a href="data-produk-genshin.php"><img src="asset/genshin.jpg" alt=""></a>
                 <figcaption>Genshin Impact</figcaption>
                 <figcaption>Rp 75.500 - 1.399.000</figcaption>
             </div>
