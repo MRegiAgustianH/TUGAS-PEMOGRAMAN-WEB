@@ -27,6 +27,7 @@ if (isset($_SESSION['id']) &&!empty($_SESSION['id'])) {
         <nav class="wrapper">
             <a href="Dashboard.php"><h2>LING STORE</h2></a>
             <ul class="navigation">
+                <li><a href="edit-tentang.php">Tentang</a></li>
                 <img src="asset/histori.svg" alt="">
                 <li><a href="histori.php">Histori</a></li>
                 <img src="asset/dataproduk.svg" alt="">

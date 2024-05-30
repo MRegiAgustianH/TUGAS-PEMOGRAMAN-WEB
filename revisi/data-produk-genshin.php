@@ -39,11 +39,13 @@
                 $sql = "SELECT * FROM data_genshin";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
+                    echo "<a href='transaksi-genshin.php?id={$row['id']}&jumlah_primo={$row['jumlah_primo']}&harga={$row['harga']}'>";
                     echo "<div class='box-diamond'>";
-                    echo "<figcaption>". $row['jumlah_primo']. " Primogems</figcaption>";
+                    echo "<figcaption>". $row['jumlah_primo']. " Diamond</figcaption>";
                     echo "<img src='asset/primo.png' alt=''>";
                     echo "<figcaption style='color:red'>Rp. ". $row['harga']. "</figcaption>";
                     echo "</div>";
+                    echo "</a>";
                 }
             ?>
     </div>

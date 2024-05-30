@@ -83,6 +83,7 @@ if ($_SESSION['status'] != true) {
         <nav class="wrapper">
             <a href="Dashboard.php"><h2>LING STORE</h2></a>
             <ul class="navigation">
+                <li><a href="edit-tentang.php">Tentang</a></li>
                 <img src="asset/histori.svg" alt="">
                 <li><a href="histori.php">Histori</a></li>
                 <img src="asset/dataproduk.svg" alt="">
@@ -106,6 +107,7 @@ if ($_SESSION['status'] != true) {
     </section>
 
     <div class="histori">
+        <h2>Mobile Legends</h2>
         <?php
         include 'Database.php';
 
@@ -133,6 +135,97 @@ if ($_SESSION['status'] != true) {
         mysqli_close($conn);
         ?>
     </div>
+
+    <div class="histori">
+        <h2>PUBG Mobile</h2>
+        <?php
+        include 'Database.php';
+
+        $sql = "SELECT * FROM transaksi_pubg";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+                <div class="histori-item">
+                    <p class="transaction-id">ID Transaksi: <?= $row["id"] ?></p>
+                    <p class="product-name">Nama: <?= $row["nama"] ?></p>
+                    <p class="quantity">Jumlah UC: <span><?= $row["jumlah_uc"] ?></span></p>
+                    <p class="price">Harga: <span><?= $row["harga"] ?></span></p>
+                    <p class="payment-method">Metode Pembayaran: <span><?= $row["metode_pembayaran"] ?></span></p>
+                    <p class="date">Date: <span><?= $row["tgl_pembelian"] ?></span></p>
+                    <p class="status">Status: <span><?= $row["status"] ?></span></p>
+                </div>
+        <?php
+            }
+        } else {
+            echo "No transactions found.";
+        }
+
+        mysqli_close($conn);
+        ?>
+    </div>
+
+    <div class="histori">
+        <h2>Valorant</h2>
+        <?php
+        include 'Database.php';
+
+        $sql = "SELECT * FROM transaksi_valorant";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+                <div class="histori-item">
+                    <p class="transaction-id">ID Transaksi: <?= $row["id"] ?></p>
+                    <p class="product-name">Nama: <?= $row["nama"] ?></p>
+                    <p class="quantity">Jumlah VP: <span><?= $row["jumlah_vp"] ?></span></p>
+                    <p class="price">Harga: <span><?= $row["harga"] ?></span></p>
+                    <p class="payment-method">Metode Pembayaran: <span><?= $row["metode_pembayaran"] ?></span></p>
+                    <p class="date">Date: <span><?= $row["tgl_pembelian"] ?></span></p>
+                    <p class="status">Status: <span><?= $row["status"] ?></span></p>
+                </div>
+        <?php
+            }
+        } else {
+            echo "No transactions found.";
+        }
+
+        mysqli_close($conn);
+        ?>
+    </div>
+
+    <div class="histori">
+        <h2>Genshin</h2>
+        <?php
+        include 'Database.php';
+
+        $sql = "SELECT * FROM transaksi_genshin";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+                <div class="histori-item">
+                    <p class="transaction-id">ID Transaksi: <?= $row["id"] ?></p>
+                    <p class="product-name">Nama: <?= $row["nama"] ?></p>
+                    <p class="quantity">Jumlah Primo: <span><?= $row["jumlah_primo"] ?></span></p>
+                    <p class="price">Harga: <span><?= $row["harga"] ?></span></p>
+                    <p class="payment-method">Metode Pembayaran: <span><?= $row["metode_pembayaran"] ?></span></p>
+                    <p class="date">Date: <span><?= $row["tgl_pembelian"] ?></span></p>
+                    <p class="status">Status: <span><?= $row["status"] ?></span></p>
+                </div>
+        <?php
+            }
+        } else {
+            echo "No transactions found.";
+        }
+
+        mysqli_close($conn);
+        ?>
+    </div>
+    
 
     <footer>
         &copy; Copyright 2024 ALING

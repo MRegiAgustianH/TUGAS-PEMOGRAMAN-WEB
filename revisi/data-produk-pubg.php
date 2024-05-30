@@ -39,11 +39,13 @@
                 $sql = "SELECT * FROM data_pubg";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
+                    echo "<a href='transaksi-pubg.php?id={$row['id']}&jumlah_uc={$row['jumlah_uc']}&harga={$row['harga']}'>";
                     echo "<div class='box-diamond'>";
                     echo "<figcaption>". $row['jumlah_uc']. " UC</figcaption>";
                     echo "<img src='asset/uc.webp' alt=''>";
                     echo "<figcaption style='color:red'>Rp. ". $row['harga']. "</figcaption>";
                     echo "</div>";
+                    echo "</a>";
                 }
             ?>
     </div>

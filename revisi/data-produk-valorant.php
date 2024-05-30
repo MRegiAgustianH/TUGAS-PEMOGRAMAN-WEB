@@ -39,11 +39,13 @@
                 $sql = "SELECT * FROM data_valorant";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()){
+                    echo "<a href='transaksi-valorant.php?id={$row['id']}&jumlah_vp={$row['jumlah_vp']}&harga={$row['harga']}'>";
                     echo "<div class='box-diamond'>";
-                    echo "<figcaption>". $row['jumlah_vp']. " VP</figcaption>";
+                    echo "<figcaption>". $row['jumlah_vp']. " UC</figcaption>";
                     echo "<img src='asset/valorant_vp2.png' alt=''>";
                     echo "<figcaption style='color:red'>Rp. ". $row['harga']. "</figcaption>";
                     echo "</div>";
+                    echo "</a>";
                 }
             ?>
     </div>

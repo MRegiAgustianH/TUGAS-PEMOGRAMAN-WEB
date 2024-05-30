@@ -96,7 +96,22 @@
             <div class="box-tentang">
             <h2>LING STORE</h2>
             <br>
-            <p><span>Adalah sebuah website top up Game yang menawarkan harga terjangkau dengan berbagai bonus menarik</span></p>
+            <?php
+                include 'Database.php'; 
+
+                $sql = "SELECT * FROM tentang"; 
+                $result = mysqli_query($conn, $sql);
+
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<p><span>" . $row['deskripsi'] . "</span></p>";
+                    }
+                } else {
+                    echo "Error: " . mysqli_error($conn);
+                }
+                mysqli_close($conn);
+                ?>
+
             </div>
         </div>
         <div class="tentang-kanan">
